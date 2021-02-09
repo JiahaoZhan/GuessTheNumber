@@ -11,12 +11,15 @@ for (let btn of btns) {
   });
 }
 
-document.querySelector('.close-modal').addEventListener('click', function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+document.querySelector(".close-modal").addEventListener("click", function () {
+  closeModal();
 });
 
-overlay.addEventListener('click', function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+overlay.addEventListener("click", function () {
+  closeModal();
 });
